@@ -1,7 +1,25 @@
-import type { Preview } from "@storybook/react";
+// import type { Preview } from "@storybook/react";
 
-const preview: Preview = {
+// const preview: Preview = {
+//   parameters: {
+//     controls: {
+//       matchers: {
+//         color: /(background|color)$/i,
+//         date: /Date$/,
+//       },
+//     },
+//   },
+// };
+
+// export default preview;
+
+import '../src/index.css';
+
+//👇 Configures Storybook to log the actions( onArchiveTask and onPinTask ) in the UI.
+/** @type { import('@storybook/react').Preview } */
+const preview = {
   parameters: {
+    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
         color: /(background|color)$/i,
